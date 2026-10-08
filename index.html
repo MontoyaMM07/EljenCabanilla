@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eljen L. Cabanilla | Personal Profile</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #111713;
+            color: #f2f2ec;
+            line-height: 1.7;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 7%;
+            border-bottom: 1px solid #303830;
+            position: sticky;
+            top: 0;
+            background: #111713;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d77a4e;
+        }
+
+        section {
+            padding: 90px 7%;
+        }
+
+        .label {
+            color: #a9bd83;
+            letter-spacing: 4px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 35px;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .profile-container {
+            flex-shrink: 0;
+        }
+
+        .profile-photo {
+            width: 320px;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #4d5a4e;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: clamp(50px, 8vw, 90px);
+            line-height: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            color: #aeb4ad;
+            font-size: 18px;
+            max-width: 650px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 35px;
+            background: #c96b47;
+            color: white;
+            padding: 16px 30px;
+            border-radius: 35px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: #df805a;
+        }
+
+        .about {
+            border-top: 1px solid #303830;
+        }
+
+        .about h2,
+        .gallery h2,
+        .skills h2,
+        .contact h2 {
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1;
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            color: #aeb4ad;
+            max-width: 850px;
+            margin-bottom: 25px;
+            font-size: 17px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 35px;
+        }
+
+        .tag {
+            border: 1px solid #858d84;
+            padding: 9px 20px;
+            border-radius: 30px;
+            color: #ddd;
+        }
+
+        .gallery {
+            border-top: 1px solid #303830;
+        }
+
+        .gallery-intro {
+            color: #aeb4ad;
+            margin-bottom: 40px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .gallery-card {
+            background: #29342c;
+            padding: 18px;
+            border-radius: 8px;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .skills {
+            border-top: 1px solid #303830;
+        }
+
+        .skills p {
+            color: #aeb4ad;
+            margin-bottom: 35px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            border: 1px solid #858d84;
+            padding: 12px 25px;
+            border-radius: 30px;
+        }
+
+        .contact {
+            background: #29342c;
+            margin: 50px 7%;
+            border-radius: 8px;
+        }
+
+        .contact p {
+            color: #aeb4ad;
+            max-width: 600px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #777;
+            border-top: 1px solid #303830;
+        }
+
+        @media (max-width: 700px) {
+            nav ul {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-card img {
+                height: 300px;
+            }
+
+            .contact {
+                margin: 30px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">Eljen / 01</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#family">Family</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <div class="label">PERSONAL PROFILE / 2026</div>
+
+            <h1>
+                Welcome!<br>
+                I am Eljen.
+            </h1>
+
+            <p>
+                A Criminology student passionate about understanding
+                crime, justice, and human behavior.
+            </p>
+
+            <a href="#about" class="button">About me ↗</a>
+
+        </div>
+
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT ME -->
+    <section class="about" id="about">
+
+        <div class="label">01 / ABOUT ME</div>
+
+        <h2>
+            Learning with purpose, growing with experience.<br>
+        </h2>
+
+        <p>
+            Hello! I am Eljen L. Cabanilla, a Criminology student who is passionate about understanding
+            people, society, crime, and justice. I value discipline, respect, and responsibility in
+            everything I do.
+        </p>
+
+        <p>
+            As I continue my studies, I aim to gain knowledge, improve my skills, and become a responsible
+            and dedicated future professional in the field of criminology.
+        </p>
+
+        <div class="tags">
+            <span class="tag">Criminology</span>
+            <span class="tag">Responsibility</span>
+            <span class="tag">Discipline</span>
+            <span class="tag">Growth</span>
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+
+        <div class="label">02 / GALLERY</div>
+
+        <h2>Moments that tell my story.</h2>
+
+        <p class="gallery-intro">
+            A collection of memories, experiences, and moments
+            that reflect different parts of my life. Each photo
+            represents something meaningful and memorable.
+        </p>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-card">
+                <img src="gallery1.jpg"
+                     alt="Gallery photo">
+            </div>
+
+            <div class="gallery-card">
+                <img src="gallery2.jpg"
+                     alt="Gallery photo">
+            </div>
+
+            <div class="gallery-card">
+                <img src="gallery3.jpg"
+                     alt="Gallery photo">
+            </div>
+
+            <div class="gallery-card">
+                <img src="gallery4.jpg"
+                     alt="Gallery photo">
+            </div>
+
+            <div class="gallery-card">
+                <img src="gallery5.jpg"
+                    alt="Gallery photo 5">
+            </div>
+
+        </div>
+
+    </section>
+
+        
+    <!-- FAMILY -->
+    <section class="gallery" id="family">
+
+        <div class="label">03 / FAMILY</div>
+
+        <h2>Where love and support begin.</h2>
+
+        <p class="gallery-intro">
+            My family is an important part of my journey. They remind
+            me to stay strong, value what matters, and continue moving
+            forward as I grow.
+        </p>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-card">
+                <img src="family.jpg"
+                    alt="Family photo 1">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS & ABILITIES -->
+    <section class="skills" id="skills">
+
+        <div class="label">04 / SKILLS & ABILITIES</div>
+
+        <h2>Learning, improving, and growing.</h2>
+
+        <p>
+            I continue to develop my skills through learning,
+            experience, and new challenges.
+        </p>
+
+        <div class="skill-list">
+            <span class="skill">Critical Thinking</span>
+            <span class="skill">Problem Solving</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Leadership</span>
+            <span class="skill">Self-discipline</span>
+            <span class="skill">Adaptability</span>
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="label">05 / CONTACT</div>
+
+        <h2>Let's connect.</h2>
+
+        <p>
+            I'm always open to new connections, conversations, and opportunities
+            to learn. Feel free to reach out and connect with me.
+        </p>
+
+        <div class="contact-info">
+
+            <p><strong>Number:</strong> 09166408780</p>
+
+            <p><strong>Facebook:</strong> Eljen</p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        © 2026 Cabanilla, Eljen L. — Personal Profile
+    </footer>
+
+</body>
+</html>
